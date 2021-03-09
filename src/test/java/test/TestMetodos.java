@@ -33,6 +33,25 @@ public class TestMetodos {
     }
 	
 	@Test
+	public void testMetodoCantidadAsientos(){
+		
+		Auto a = new Auto();
+		
+		a.asientos = new Asiento[5];
+		
+		a.asientos[0] = new Asiento();
+		a.asientos[4] = new Asiento();
+	
+		boolean ok = false;
+		
+		if(a.cantidadAsientos() == 2) {
+			ok = true;
+		}
+	
+		assertTrue(ok, "Hay un problema con el metodo cantidadAsientos y sus restricciones de la clase Auto");
+	}
+
+	@Test
    	public void testMetodoCambiarRegistro(){
 		
 		Motor m = new Motor();
@@ -67,25 +86,6 @@ public class TestMetodos {
 		}
 
 		assertTrue(ok, "Hay un problema con el metodo asignarTipo y sus restricciones de la clase Motor");
-    }
-	
-	@Test
-   	public void testMetodoCantidadAsientos(){
-		
-		Auto a = new Auto();
-		
-		a.asientos = new Asiento[5];
-		
-		a.asientos[0] = new Asiento();
-		a.asientos[4] = new Asiento();
-
-		boolean ok = false;
-		
-		if(a.cantidadAsientos() == 2) {
-			ok = true;
-		}
-
-		assertTrue(ok, "Hay un problema con el metodo cantidadAsientos y sus restricciones de la clase Auto");
     }
 	
 	@Test
